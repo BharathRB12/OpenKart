@@ -1,0 +1,16 @@
+11:43:41.833 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+11:55:16.586 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+13:08:10.556 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+15:57:11.032 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+16:18:08.270 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+16:35:13.651 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+09:54:24.128 [TestNG-tests-2] ERROR testCases.TC001_AccountRegistrationTest - Test failed..
+09:54:58.451 [TestNG-tests-1] ERROR testCases.TC001_AccountRegistrationTest - Test failed..
+09:55:17.431 [TestNG-tests-3] ERROR testCases.TC001_AccountRegistrationTest - Test failed..
+09:57:11.585 [TestNG-tests-2] ERROR testCases.TC001_AccountRegistrationTest - Test failed..
+09:57:12.079 [TestNG-tests-1] ERROR testCases.TC001_AccountRegistrationTest - Test failed..
+12:21:10.563 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+12:28:38.499 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+15:43:05.293 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+15:53:52.862 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+15:56:38.046 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
