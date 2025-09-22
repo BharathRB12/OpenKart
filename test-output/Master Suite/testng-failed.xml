@@ -7,19 +7,14 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
-    <groups>
-      <run>
-        <include name="Master"/>
-      </run>
-    </groups>
     <classes>
-      <class name="testCases.TC004_AddToCartTest">
+      <class name="testCases.TC005_OrderingItem">
         <methods>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="verifyAddToCart"/>
+          <include name="verifyUserIsAbleToOrder"/>
         </methods>
-      </class> <!-- testCases.TC004_AddToCartTest -->
+      </class> <!-- testCases.TC005_OrderingItem -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Master Suite] -->

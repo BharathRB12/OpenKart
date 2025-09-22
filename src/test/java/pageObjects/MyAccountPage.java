@@ -18,11 +18,13 @@ public class MyAccountPage extends BasePage
 	//Actions
 	public boolean isMyAccountPageExist()
 	{
+		waitForVisibility(myAccPageHeader);
 		return myAccPageHeader.isDisplayed();
 	}
 	
 	public String getMyAccountPageHeader()
 	{
+		waitForVisibility(myAccPageHeader);
 		return myAccPageHeader.getText();
 	}
 	

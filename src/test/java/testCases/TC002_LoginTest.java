@@ -16,6 +16,9 @@ public class TC002_LoginTest extends BaseClass
 		try {
 			//Home page
 			HomePage hp=new HomePage(driver);
+			String expHomeTitle=pr.getProperty("homePageTitle");
+			String homeTitle=hp.getPageTitle(expHomeTitle);
+			Assert.assertEquals(homeTitle, homeTitle);
 			logger.info("Verifying Home page logo");
 			boolean homePageLogo=hp.isLogoDisplayed();
 			Assert.assertEquals(homePageLogo, true, "Logo is not displayed");
@@ -27,6 +30,9 @@ public class TC002_LoginTest extends BaseClass
 			//Login page
 			LoginPage lp=new LoginPage(driver);
 			logger.info("Verifying New Customer Header is present");
+			String expLoginTitle=pr.getProperty("loginPageTitle");
+			String	loginHeader=lp.getPageTitle(expLoginTitle);
+			Assert.assertEquals(loginHeader, expLoginTitle);
 			boolean newCustHeader=lp.isNewCustHeaderExist();
 			Assert.assertEquals(newCustHeader, true, "New Customer Header is not displayed");
 			logger.info("Verifying Returning Customer Header is present");
@@ -40,6 +46,9 @@ public class TC002_LoginTest extends BaseClass
 			//My Account Page
 			MyAccountPage map=new MyAccountPage(driver);
 			logger.info("validating My Account page header");
+			String expMATitle=pr.getProperty("myAccPagetitle");
+			String MATitle=map.getPageTitle(expMATitle);
+			Assert.assertEquals(MATitle, expMATitle);
 			String targetPageHeader=map.getMyAccountPageHeader();
 			Assert.assertEquals(targetPageHeader, pr.getProperty("myAccountPageHeading"), "My Account page is not displayed");
 		} catch (Exception e) {

@@ -15,6 +15,9 @@ public class TC001_AccountRegistrationTest extends BaseClass
 		try
 		{
 		HomePage hp=new HomePage(driver);
+		String expHPTitle=pr.getProperty("homePageTitle");
+		String hpTitle=hp.getPageTitle(expHPTitle);
+		Assert.assertEquals(hpTitle, expHPTitle);
 		logger.info("Verified Logo is present in homepage");
 		Assert.assertEquals(hp.isLogoDisplayed(), true);
 		logger.info("Clicked on My Account Button");
@@ -24,6 +27,9 @@ public class TC001_AccountRegistrationTest extends BaseClass
 		
 		AccountRegistrationPage regpage=new AccountRegistrationPage(driver);
 		logger.info("Validating Registration Account page header");
+		String expRegTitle= pr.getProperty("registerPageTitle");
+		String regTitle=regpage.getPageTitle(expRegTitle);
+		Assert.assertEquals(regTitle, expRegTitle);
 		Assert.assertEquals(regpage.getHeadingText(), "Register Account");
 		logger.info("Providing the customer details for Registration");
 		regpage.setFirstName(randomString().toUpperCase());

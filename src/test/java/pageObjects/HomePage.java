@@ -10,7 +10,6 @@ public class HomePage extends BasePage
 	public HomePage(WebDriver driver) {
 		super(driver);
 	}
-
 	@FindBy(xpath="//div[@id='logo']") WebElement homePageLogo;
 	
 	@FindBy(xpath="//span[normalize-space()='My Account']") WebElement lnkMyAccount;
@@ -25,8 +24,10 @@ public class HomePage extends BasePage
 	
 	//actions
 	
+	
 	public boolean isLogoDisplayed()
 	{
+		waitForVisibility(homePageLogo);
 		return homePageLogo.isDisplayed();
 	}
 	

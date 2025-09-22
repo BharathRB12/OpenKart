@@ -8,6 +8,13 @@
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="testCases.TC005_OrderingItem">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="verifyUserIsAbleToOrder"/>
+        </methods>
+      </class> <!-- testCases.TC005_OrderingItem -->
       <class name="testCases.TC004_AddToCartTest">
         <methods>
           <include name="teardown"/>

@@ -26,6 +26,7 @@ public class AccountRegistrationPage extends BasePage
 	//actions
 	public String getHeadingText()
 	{
+		waitForVisibility(registerAccountHeading);
 		return registerAccountHeading.getText();
 	}
 	
@@ -83,10 +84,10 @@ public class AccountRegistrationPage extends BasePage
 		myWait.until(ExpectedConditions.elementToBeClickable(btnContinue)).click();
 		*/
 	}
-	
 	public String getConfirmationMsg()
 	{
 		try {
+			waitForVisibility(msgConfirmation);
 			return(msgConfirmation.getText());
 		} catch (Exception e) {
 			return (e.getMessage());

@@ -17,11 +17,13 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -114,6 +116,13 @@ public class BaseClass {
 
 	public String randomAlpaNumeric() {
 		return RandomStringUtils.randomAlphanumeric(10);
+	}
+	
+	
+	public void setDropDownValue(WebElement ele, String entname)
+	{
+		Select sc=new Select(ele);
+		sc.selectByVisibleText(entname);
 	}
 
 	public String captureScreen(String tname) throws IOException {

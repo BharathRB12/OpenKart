@@ -26,6 +26,7 @@ public class LoginPage extends BasePage
 	public boolean isNewCustHeaderExist()
 	{
 		try {
+			waitForVisibility(newCustHeader);
 			return newCustHeader.isDisplayed();
 		} catch (Exception e) {
 			return false;
@@ -35,6 +36,7 @@ public class LoginPage extends BasePage
 	public boolean isReturnCustHeaderExist()
 	{
 		try {
+			waitForVisibility(returnCustHeader);
 			return returnCustHeader.isDisplayed();
 		} catch (Exception e) {
 			return false;

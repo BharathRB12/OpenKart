@@ -14,3 +14,17 @@
 15:43:05.293 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
 15:53:52.862 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
 15:56:38.046 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+18:13:22.124 [main] ERROR testCases.TC005_OrderingItem - Test failed..
+18:26:18.669 [main] ERROR testCases.TC005_OrderingItem - Test failed..
+18:33:50.606 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+21:23:44.409 [main] ERROR testCases.TC005_OrderingItem - Test failed..
+10:17:47.754 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+10:21:37.572 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+10:22:31.739 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+10:33:48.214 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+10:38:24.417 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+11:08:22.936 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+12:17:02.890 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+12:23:10.244 [main] ERROR testCases.TC005_OrderingItem - Test failed..
+12:40:03.251 [main] ERROR testCases.TC004_AddToCartTest - Test failed..
+12:40:34.124 [main] ERROR testCases.TC005_OrderingItem - Test failed..

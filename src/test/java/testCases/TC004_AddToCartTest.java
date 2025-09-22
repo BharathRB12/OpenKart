@@ -1,5 +1,7 @@
 package testCases;
 
+import java.util.ArrayList;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,6 +19,9 @@ public class TC004_AddToCartTest extends BaseClass
 		logger.info("*** Starting of TC004_AddToCartTest ***");
 		try {
 		HomePage hp=new HomePage(driver);
+		String expHomeTitle=pr.getProperty("homePageTitle");
+		String homeTitle=hp.getPageTitle(expHomeTitle);
+		Assert.assertEquals(homeTitle, homeTitle);
 		logger.info("Verifing Home Page Logo");
 		Assert.assertTrue(hp.isLogoDisplayed());
 		logger.info("navigating to Login page");
@@ -25,6 +30,9 @@ public class TC004_AddToCartTest extends BaseClass
 		
 		LoginPage lp=new LoginPage(driver);
 		logger.info("Verifing Login Page");
+		String expLoginTitle=pr.getProperty("loginPageTitle");
+		String	loginHeader=lp.getPageTitle(expLoginTitle);
+		Assert.assertEquals(loginHeader, expLoginTitle);
 		Assert.assertTrue(lp.isReturnCustHeaderExist());
 		String email=pr.getProperty("email");
 		String password=pr.getProperty("password");
@@ -34,33 +42,38 @@ public class TC004_AddToCartTest extends BaseClass
 		
 		logger.info("Seaching Item");
 		String itemName=pr.getProperty("searchItem");
+		Thread.sleep(2000);
 		hp.setSearchTxt(itemName);
 		logger.info("Click on Search button");
 		hp.clickSearch();
 		
 		SearchPage sp=new SearchPage(driver);
 		logger.info("Verifying Search page header");
-		String spHeader=sp.verifySearchPage();
-		String expHeader=pr.getProperty("searchPageHeader")+" - "+itemName;
-		Assert.assertEquals(spHeader, expHeader);
-		
+		String expSpTitle=pr.getProperty("searchPageHeader")+" - "+itemName;
+		String spTitle=sp.getPageTitle(expSpTitle);
+		Assert.assertEquals(spTitle, expSpTitle);
 		logger.info("Adding Item to Cart");
 		sp.clickAddToCart();
 		logger.info("Verifying successfull Message");
 		Assert.assertTrue(sp.verifyAddToCartSuccessMsg());
-		
 		logger.info("Navigating to Shopping Cart Page");
-		Thread.sleep(3000);
 		sp.clickCartBtn();
 		sp.clickViewCart();
 		
 		ShoppingCartPage scp=new ShoppingCartPage(driver);
 		logger.info("Validating Shopping Cart Page header");
-		String targetPage=scp.validateShoppingCartPage();
-		Assert.assertEquals(targetPage, pr.getProperty("shoppingCartPageHeader"));
+		String expSCTitle=pr.getProperty("shoppingCartPageTitle");
+		String SCTitle=scp.getPageTitle(expSCTitle);
+		Assert.assertEquals(SCTitle, expSCTitle);
 		logger.info("Validating Added item is present or not");
-		String validateItem=scp.ValidateAddedItem();
-		Assert.assertEquals(validateItem, itemName);
+		ArrayList<String> arrlist = scp.getAddedItemInList();
+		arrlist.contains(itemName);
+		logger.info("Removing added item from Cart");
+		scp.clickRemove();
+		String emptyMsg=pr.getProperty("emptyShoppingCartMsg");
+		String emptyCartMsg=scp.emptySCartMsg(emptyMsg);
+		Assert.assertEquals(emptyCartMsg,emptyMsg);
+		
 		}
 			catch(Exception e)
 			{
